@@ -103,13 +103,19 @@ public class Program
         Console.WriteLine(qa.titleToNumber("AA"));
         #endregion
 
-        #region Method - insertNumberInPlaces
+        #region Method - insertNumberInPlaces [used string.Join(", ", {arrayName})]
         int[] outputArray = ap.insertNumberInPlaces();
-        foreach (var item in outputArray)
-        {
-            Console.Write(item + " ");
-        }
-        Console.WriteLine("");
+        Console.WriteLine("Insert Number in places [" + string.Join(", ", outputArray) + "]");
+        //foreach (var item in outputArray)
+        //{
+        //    Console.Write(item + " ");
+        //}
+        //Console.WriteLine("");
+        #endregion
+
+        #region Method - thirdLargestNumber
+        int thirdLargestNumberOutput = ap.thirdLargestNumber(new int[] { 1, 9, 4, 3, 6, 7 });
+        Console.WriteLine(thirdLargestNumberOutput);
         #endregion
     }
 }

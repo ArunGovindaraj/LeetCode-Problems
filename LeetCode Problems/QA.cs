@@ -465,6 +465,40 @@ namespace LeetCode_Problems
             return outputArray;
         }
         #endregion
+
+        #region to find the third largest number in a unsorted array
+        public int thirdLargestNumber(int[] inputArray)
+        {
+            #region BubbleSort - there is no need to iterate entire array we can end the rounds = nth element
+            int length = inputArray.Length;
+            int swap;
+            int rounds = 0;
+            bool order = false;
+
+            while (!order && rounds < 3)
+            {
+                order = true;
+
+                for (int i = 0; i < length - 1 - rounds; i++)
+                {
+                    if (inputArray[i] > inputArray[i + 1])
+                    {
+                        swap = inputArray[i];
+                        inputArray[i] = inputArray[i + 1];
+                        inputArray[i + 1] = swap;
+
+                        order = false;
+                    }
+                }
+                rounds++;
+            }
+            #endregion
+            //Console.WriteLine("[ " + string.Join(", ", inputArray) + "]");
+            int thirdLargestNumber = inputArray[length - 3];
+
+            return thirdLargestNumber;
+        }
+        #endregion
     }
     #endregion
 }
