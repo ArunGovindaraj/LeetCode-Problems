@@ -4,7 +4,7 @@ public class Program
 {
     static void Main(string[] args)
     {
-        #region Object creation for classes
+        #region Object creation - Class - QA
         QA qa = new QA();
         AwayProblems ap = new AwayProblems();
         LeetCode_Problems.Array aPrint = new LeetCode_Problems.Array();
@@ -114,8 +114,14 @@ public class Program
         #endregion
 
         #region Method - thirdLargestNumber
-        int thirdLargestNumberOutput = ap.thirdLargestNumber(new int[] { 1, 9, 4, 3, 6, 7 });
+        int thirdLargestNumberOutput = ap.thirdLargestNumber(new int[] { 10, 1, 9, 4, 6, 7, 11, 55, 36, 2, 3 });
         Console.WriteLine(thirdLargestNumberOutput);
+        #endregion
+
+
+        #region Object creation - Class - SortingAlgo
+        SortingAlgo sortingAlgo = new SortingAlgo();
+        Console.WriteLine(sortingAlgo.bubbleSortAlgo(new int[] { 5, 2, 1, 10, 35, 9, 8, 19 }));
         #endregion
     }
 }
