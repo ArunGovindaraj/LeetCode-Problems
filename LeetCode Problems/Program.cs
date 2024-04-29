@@ -121,7 +121,14 @@ public class Program
 
         #region Object creation - Class - SortingAlgo
         SortingAlgo sortingAlgo = new SortingAlgo();
-        Console.WriteLine(sortingAlgo.bubbleSortAlgo(new int[] { 5, 2, 1, 10, 35, 9, 8, 19 }));
+        #endregion
+
+        #region Method - bubbleSortAlgo
+        sortingAlgo.bubbleSortAlgo(new int[] { 5, 2, 1, 10, 35, 9, 8, 19 });
+        #endregion
+
+        #region Method - selectionSortAlgo
+        sortingAlgo.selectionSortAlgo(new int[] { 5, 2, 1, 10, 35, 9, 8, 19 });
         #endregion
     }
 }
